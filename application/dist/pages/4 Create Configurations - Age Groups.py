@@ -80,7 +80,14 @@ else:
     st.session_state['prevfilename_key'] = None
 
 n_scenarios = col1.number_input("Number of scenario's", value=1, placeholder="Type a number...", step=1)
+include_0 = col1.checkbox('Include 0', value=False)
+include_100 = col1.checkbox('Include 100', value=False)
 succes_rates = list(range(100//n_scenarios,100+1,100//n_scenarios))
+if include_0:
+    if 0 not in succes_rates: succes_rates = [0] + succes_rates
+if include_100:
+    if 100 not in succes_rates: succes_rates = succes_rates + [100]
+n_scenarios = len(succes_rates)
 col1.text(f'Success rates: {succes_rates}')
 
 
@@ -100,7 +107,7 @@ age_groups_initial = pd.DataFrame(
         {"from_category": None, "to_category": None},
     ]
 )
-edited_transition_chances = col2.data_editor(
+edited_age_groups = col2.data_editor(
     age_groups_initial,
     column_config={
         "from_category": "FROM",
@@ -110,8 +117,10 @@ edited_transition_chances = col2.data_editor(
     num_rows="dynamic",
 )
 
-from_ = edited_transition_chances.from_category.values.tolist()
-to_ = edited_transition_chances.to_category.values.tolist()
+edited_age_groups.dropna(axis=0, how='all', inplace=True) # drop rows with any nan
+
+from_ = edited_age_groups.from_category.values.tolist()
+to_ = edited_age_groups.to_category.values.tolist()
 age_groups = [(from_[i], to_[i]) for i in range(len(from_))]
 sex_options = ["Male", "Female", "Male and Female"]
 targetSex = col2.selectbox("Target sex for the scenario's", range(len(sex_options)), index=st.session_state['target_sex_key'], format_func=(lambda x: sex_options[x]))

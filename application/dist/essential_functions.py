@@ -50,7 +50,9 @@ def get_and_delete_default_scenario(tree):
         defaults['default_transfilename'] = default_scenario.find('transfilename').text
         defaults['default_prevfilename'] = default_scenario.find('prevfilename').text
 
-        scenarios = root.find('scenarios')
-        scenarios.remove(default_scenario)
+    # remove scenario's
+    for parent in root.iter():
+        for elem in parent.findall('scenario'):
+            parent.remove(elem)
 
     return(tree, default_scenario, defaults)

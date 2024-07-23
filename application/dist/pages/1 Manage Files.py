@@ -44,7 +44,7 @@ def main():
     input_files =  os.listdir(os.path.join(CONTENT_DIR, INPUT_FOLDER))
     if len(input_files) > 0:
         for file_name_in in input_files:
-            column1, column2, column3 = col1.columns((4, 1, 1))
+            column1, column2, column3 = col1.columns((4, 2, 2))
             column1.caption(file_name_in)
             column3.button("Delete", key=file_name_in, on_click=delete_file, args=(os.path.join(CONTENT_DIR, INPUT_FOLDER), file_name_in,))
     else:
@@ -60,7 +60,7 @@ def main():
     output_files =  os.listdir(os.path.join(CONTENT_DIR, OUTPUT_FOLDER))
     if len(output_files) > 0:
         for file_name_out in output_files:
-            column1, column2, column3 = col3.columns((4, 1, 1))
+            column1, column2, column3 = col3.columns((4, 2, 2))
             column1.caption(file_name_out)
             column3.button("Delete", key=file_name_out, on_click=delete_file, args=(os.path.join(CONTENT_DIR, OUTPUT_FOLDER), file_name_out,))
     else:
