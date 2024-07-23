@@ -88,8 +88,17 @@ else:
     st.session_state['prevfilename_key'] = None
 
 n_scenarios = col1.number_input("Number of scenario's", value=1, placeholder="Type a number...", step=1)
+include_0 = col1.checkbox('Include 0', value=False)
+include_100 = col1.checkbox('Include 100', value=False)
 succes_rates = list(range(100//n_scenarios,100+1,100//n_scenarios))
-col1.text(f'Success rates: {succes_rates}')
+if include_0:
+    if 0 not in succes_rates: succes_rates = [0] + succes_rates
+if include_100:
+    if 100 not in succes_rates: succes_rates = succes_rates + [100]
+n_scenarios = len(succes_rates)
+
+
+col1.write(f'Success rates:  \n{succes_rates}')
 
 
 targetMinAge = col2.number_input("Minimum age for the scenario's", value=st.session_state['target_min_age_key'], placeholder="Type a number...", step=1)
