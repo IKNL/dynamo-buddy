@@ -13,10 +13,13 @@ Dynamo-buddy can help you create transition matrices and configurations with mul
 ![image](https://github.com/user-attachments/assets/a40603e5-3291-433f-a594-7433b9c95af3)
 
 ### Use case 1: Transition matrix
-On the page 'Transition Matrix' you can create transition matrices by specifying the start age, stop age, number of categories (for example 3 categories like 'non-smoker', 'former smoker', 'current smoker'). On the right you see a small table where you can set the transition chances. You can edit this table, changes the example numbers in there, add/delete rows, etc. The big table below will show you how the transition matrix will look like.
-At this moment it is not possible to apply different transition chances per gender, or per age (group), this could be an extension for later. When you are happy with the example matrix you can press the 'Create transitionmatrix' button. A file will be generated which you can see at 'Manage Files', you can find this file on your computer: next to the run.exe file you can find the folder content > output. Everything dynamo-buddy creates for you will be in here.
+On the page 'Transition Matrix' you can create transition matrices by first specifying the number of categories (for example 3 categories like 'non-smoker', 'former smoker', 'current smoker'). Second, you can design multiple transition rules. Per transition rule you select a gender (Male, Female, or both), and an age range (start age and stop age). On the right you see a small table where you can set the transition chances. You can edit this table, change the example numbers in there, add/delete rows, etc. 
+After setting your first transition rule, you could continue as is, or use the 'Add' and 'Delete' buttons to create/delete rules. Every new rule will overwrite the previous one if there are overlapping groups selected.
+The big table below shows how the transition matrix will look like.
+When you are happy with the example matrix you can press the 'Create transitionmatrix' button. A file will be generated which you can see at 'Manage Files', you can find this file on your computer: next to the run.exe file you can find the folder content > output. Everything dynamo-buddy creates for you will be in here.
 
-![image](https://github.com/user-attachments/assets/57e6e6b2-fcd6-483e-8c67-aa8d9d177b69)
+![image](https://github.com/user-attachments/assets/59a3d457-1944-4162-8ef9-c766f49be5ab)
+![image](https://github.com/user-attachments/assets/d54d4ab2-0364-409d-a5ea-263ae2f8df91)
 
 
 ### Use case 2: Create Configurations - Scenario's
