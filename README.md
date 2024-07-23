@@ -9,7 +9,7 @@ Dynamo-buddy can help you create transition matrices and configurations with mul
 3. An application will be opened in the browser, in the sidebar on the left you will find multiple pages you can visit.
 
 ![image](https://github.com/user-attachments/assets/9864f760-5cbe-4d7b-9168-32d354795692)
-<img width="956" alt="351413088-d54d4ab2-0364-409d-a5ea-263ae2f8df91" src="https://github.com/user-attachments/assets/56ed4536-c2fe-4aec-812d-ff5c802adbaa">
+![image](https://github.com/user-attachments/assets/a40603e5-3291-433f-a594-7433b9c95af3)
 
 ### Use case 1: Transition matrix
 On the page 'Transition Matrix' you can create transition matrices by first specifying the number of categories (for example 3 categories like 'non-smoker', 'former smoker', 'current smoker'). Second, you can design multiple transition rules. Per transition rule you select a gender (Male, Female, or both), and an age range (start age and stop age). On the right you see a small table where you can set the transition chances. You can edit this table, change the example numbers in there, add/delete rows, etc. 
@@ -18,7 +18,7 @@ The big table below shows how the transition matrix will look like.
 When you are happy with the example matrix you can press the 'Create transitionmatrix' button. A file will be generated which you can see at 'Manage Files', you can find this file on your computer: next to the run.exe file you can find the folder content > output. Everything dynamo-buddy creates for you will be in here.
 
 ![image](https://github.com/user-attachments/assets/59a3d457-1944-4162-8ef9-c766f49be5ab)
-![image](https://github.com/user-attachments/assets/d54d4ab2-0364-409d-a5ea-263ae2f8df91)
+<img width="956" alt="351413088-d54d4ab2-0364-409d-a5ea-263ae2f8df91" src="https://github.com/user-attachments/assets/56ed4536-c2fe-4aec-812d-ff5c802adbaa">
 
 
 ### Use case 2: Create Configurations - Scenario's
